@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8C71D081-BA36-45A6-BB67-B990CA0BAB7C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="projects\MenialTasks.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="projects\MenialTasksCore.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="tests\MenialTasksTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MenialTasks">
+        <MSBuild Projects="projects\MenialTasks.dproj"/>
+    </Target>
+    <Target Name="MenialTasks:Clean">
+        <MSBuild Projects="projects\MenialTasks.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MenialTasks:Make">
+        <MSBuild Projects="projects\MenialTasks.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MenialTasksCore">
+        <MSBuild Projects="projects\MenialTasksCore.dproj"/>
+    </Target>
+    <Target Name="MenialTasksCore:Clean">
+        <MSBuild Projects="projects\MenialTasksCore.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MenialTasksCore:Make">
+        <MSBuild Projects="projects\MenialTasksCore.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MenialTasksTests">
+        <MSBuild Projects="tests\MenialTasksTests.dproj"/>
+    </Target>
+    <Target Name="MenialTasksTests:Clean">
+        <MSBuild Projects="tests\MenialTasksTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MenialTasksTests:Make">
+        <MSBuild Projects="tests\MenialTasksTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MenialTasks;MenialTasksCore;MenialTasksTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MenialTasks:Clean;MenialTasksCore:Clean;MenialTasksTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MenialTasks:Make;MenialTasksCore:Make;MenialTasksTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

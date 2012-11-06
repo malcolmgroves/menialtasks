@@ -1,0 +1,69 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\OSX32\bplrtl170.dylib" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>bplrtl170.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="OSX32\Debug\MenialTasks" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>MenialTasks</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="OSX32\Debug\MenialTasks.rsm" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>MenialTasks.rsm</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="OSX32\Debug\MenialTasks.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>MenialTasks.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="bplMenialTasksCore.dylib" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>bplMenialTasksCore.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="OSX32\Debug\MenialTasks.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="OSX32\Debug\MenialTasks.icns" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasks.app\Contents\Resources\</RemoteDir>
+            <RemoteName>MenialTasks.icns</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'"/>
+</Project>
