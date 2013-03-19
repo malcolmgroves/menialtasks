@@ -44,6 +44,7 @@ object ViewMain: TViewMain
       Touch.InteractiveGestures = [igPan]
       Align = alClient
       TabOrder = 0
+      ItemIndex = 0
       DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
@@ -80,20 +81,17 @@ object ViewMain: TViewMain
     OutputConverters = <>
     Left = 76
     Top = 69
-    object LinkFillControlToField1: TLinkFillControlToField
+    object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
+      DataSource = TaskListBindSource
+      FieldName = 'Title'
       Control = ListBox1
-      Track = True
-      FillDataSource = TaskListBindSource
-      FillDisplayFieldName = 'Title'
-      AutoFill = True
-      BufferCount = -1
-      AutoBufferCount = False
       FillExpressions = <
         item
           SourceMemberName = 'Details'
           ControlMemberName = 'Detail'
         end>
+      AutoBufferCount = False
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end

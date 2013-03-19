@@ -18,10 +18,10 @@ type
     ListBox1: TListBox;
     TaskListBindSource: TPrototypeBindSource;
     BindingsList1: TBindingsList;
-    LinkFillControlToField1: TLinkFillControlToField;
     Button1: TButton;
     ActionList1: TActionList;
     actAddTask: TAction;
+    LinkListControlToField1: TLinkListControlToField;
     procedure FormDestroy(Sender: TObject);
     procedure TaskListBindSourceCreateAdapter(Sender: TObject;
       var ABindSourceAdapter: TBindSourceAdapter);
