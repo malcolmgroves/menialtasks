@@ -6,9 +6,6 @@
         <Projects Include="projects\MenialTasks.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="projects\MenialTasksCore.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="tests\MenialTasksTests.dproj">
             <Dependencies/>
         </Projects>
@@ -29,15 +26,6 @@
     <Target Name="MenialTasks:Make">
         <MSBuild Projects="projects\MenialTasks.dproj" Targets="Make"/>
     </Target>
-    <Target Name="MenialTasksCore">
-        <MSBuild Projects="projects\MenialTasksCore.dproj"/>
-    </Target>
-    <Target Name="MenialTasksCore:Clean">
-        <MSBuild Projects="projects\MenialTasksCore.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="MenialTasksCore:Make">
-        <MSBuild Projects="projects\MenialTasksCore.dproj" Targets="Make"/>
-    </Target>
     <Target Name="MenialTasksTests">
         <MSBuild Projects="tests\MenialTasksTests.dproj"/>
     </Target>
@@ -48,13 +36,13 @@
         <MSBuild Projects="tests\MenialTasksTests.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="MenialTasks;MenialTasksCore;MenialTasksTests"/>
+        <CallTarget Targets="MenialTasks;MenialTasksTests"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="MenialTasks:Clean;MenialTasksCore:Clean;MenialTasksTests:Clean"/>
+        <CallTarget Targets="MenialTasks:Clean;MenialTasksTests:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="MenialTasks:Make;MenialTasksCore:Make;MenialTasksTests:Make"/>
+        <CallTarget Targets="MenialTasks:Make;MenialTasksTests:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

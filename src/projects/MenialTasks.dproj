@@ -93,8 +93,6 @@
         <DCC_UsePackage>MenialTasksCore</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <DCC_UsePackage>MenialTasksCore</DCC_UsePackage>
-        <UsePackages>true</UsePackages>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_ExeOutput>..\..\bin\$(Platform)\$(Config)</DCC_ExeOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -117,6 +115,12 @@
         <DCCReference Include="..\views\Win\Views.Task.pas">
             <Form>TaskView</Form>
         </DCCReference>
+        <DCCReference Include="..\common\Common.Exceptions.pas"/>
+        <DCCReference Include="..\model\Model.TaskList.pas"/>
+        <DCCReference Include="..\model\Model.Task.pas"/>
+        <DCCReference Include="..\model\Model.Exceptions.pas"/>
+        <DCCReference Include="..\viewmodels\ViewModel.Task.pas"/>
+        <DCCReference Include="..\viewmodels\ViewModel.Main.pas"/>
         <None Include="ModelSupport_MenialTasks\default.txaPackage"/>
         <None Include="ModelSupport_MenialTasks\default.txvpck"/>
         <BuildConfiguration Include="Release">
