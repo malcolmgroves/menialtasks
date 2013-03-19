@@ -88,11 +88,13 @@ end;
 procedure TViewMain.Button2Click(Sender: TObject);
 begin
   ViewModel.AddNewTask;
+  RefreshBindings;
 end;
 
 procedure TViewMain.Button3Click(Sender: TObject);
 begin
   ViewModel.EditTask(TaskAdapter.Current);
+  RefreshBindings;
 end;
 
 procedure TViewMain.FormDestroy(Sender: TObject);
@@ -106,14 +108,13 @@ begin
   if not Assigned(FViewModel) then
   begin
     FViewModel := TMainViewModel.Create;
-    FViewModel.OnEditTask := procedure (Sender : TObject; TaskViewModel : TTaskViewModel)
+    FViewModel.OnEditTask := function (Sender : TObject; TaskViewModel : TTaskViewModel) : boolean
                              var
                                LTaskView : TTaskView;
                              begin
                                LTaskView := TTaskView.Create(nil, TaskViewModel);
                                try
-                                 if LTaskView.ShowModal = mrOk then
-                                   RefreshBindings;
+                                 Result := LTaskView.ShowModal = mrOk;
                                finally
                                  LTaskView.Free;
                                end;

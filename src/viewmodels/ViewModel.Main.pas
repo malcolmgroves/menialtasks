@@ -5,12 +5,12 @@ uses
   Model.TaskList, ViewModel.Task, Model.Task;
 
 type
-  TOnEditTask = reference to procedure (Sender : TObject; TaskViewModel : TTaskViewModel);
+  TOnEditTask = reference to function (Sender : TObject; TaskViewModel : TTaskViewModel) : boolean;
   TMainViewModel = class
   private
     FTasks : TTaskList;
     FOnEditTask: TOnEditTask;
-    procedure DoOnEditTask(TaskViewModel : TTaskViewModel); virtual;
+    function DoOnEditTask(TaskViewModel : TTaskViewModel): boolean; virtual;
   public
     constructor Create;
     destructor Destroy; override;
@@ -28,10 +28,13 @@ implementation
 procedure TMainViewModel.AddNewTask;
 var
   LTaskViewModel : TTaskViewModel;
+  NewTask : TTask;
 begin
-  LTaskViewModel := TTaskViewModel.Create(Tasks.AddNewTask);
+  NewTask := TTask.Create;
+  LTaskViewModel := TTaskViewModel.Create(NewTask);
   try
-    DoOnEditTask(LTaskViewModel);
+    if DoOnEditTask(LTaskViewModel) then
+      Tasks.AddTask(NewTask);
   finally
     LTaskViewModel.Free;
   end;
@@ -48,10 +51,12 @@ begin
   inherited;
 end;
 
-procedure TMainViewModel.DoOnEditTask(TaskViewModel : TTaskViewModel);
+function TMainViewModel.DoOnEditTask(TaskViewModel : TTaskViewModel) : boolean;
 begin
   if Assigned(FOnEditTask) then
-    FOnEditTask(self, TaskViewModel);
+    Result := FOnEditTask(self, TaskViewModel)
+  else
+    Result := False;
 end;
 
 procedure TMainViewModel.EditTask(ATask: TTask);

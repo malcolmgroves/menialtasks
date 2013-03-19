@@ -13,11 +13,13 @@ type
     procedure TearDown; override;
   published
     procedure TestTasksIsInstantiatedOnCreate;
+    procedure TestTaskNotAddedOnCancel;
+    procedure TestTaskAddedOnSave;
   end;
 
 implementation
 uses
-  SysUtils, DateUtils, Model.Exceptions;
+  SysUtils, DateUtils, Model.Exceptions, ViewModel.Task;
 
 procedure TestTMainViewModel.SetUp;
 begin
@@ -28,6 +30,28 @@ procedure TestTMainViewModel.TearDown;
 begin
   FMainViewModel.Free;
   FMainViewModel := nil;
+end;
+
+procedure TestTMainViewModel.TestTaskAddedOnSave;
+begin
+  FMainViewModel.OnEditTask := function (Sender : TObject; TaskViewModel : TTaskViewModel): boolean
+                               begin
+                                 Result := True; // Save was pressed
+                               end;
+
+  FMainViewModel.AddNewTask;
+  Check(FMainViewModel.Tasks.Count = 1, 'Pressing Save on AddNewTask should add a Task to the TaskList');
+end;
+
+procedure TestTMainViewModel.TestTaskNotAddedOnCancel;
+begin
+  FMainViewModel.OnEditTask := function (Sender : TObject; TaskViewModel : TTaskViewModel): boolean
+                               begin
+                                 Result := False; // Save was not pressed
+                               end;
+
+  FMainViewModel.AddNewTask;
+  Check(FMainViewModel.Tasks.Count = 0, 'Calling Cancel on AddNewTask should not add a Task to the TaskList');
 end;
 
 procedure TestTMainViewModel.TestTasksIsInstantiatedOnCreate;
