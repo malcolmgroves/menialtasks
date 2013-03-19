@@ -1,0 +1,218 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice'">
+        <DeployFile Include="Z:\code\repos\public\menialtasks\src\views\iOS\Views.Task.fsx" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Views.Task</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\iphone2xstyle_6">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>iphone2xstyle_6</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\MenialTasksiOS.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\MenialTasksiOS" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>MenialTasksiOS</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\iphone2xstyle">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>iphone2xstyle</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\ipadstyle">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>ipadstyle</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\MenialTasksiOS.dSYM" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>MenialTasksiOS</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\MenialTasksiOS.rsm" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>MenialTasksiOS.rsm</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\default2xstyle">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>default2xstyle</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\ipad2xstyle">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>ipad2xstyle</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\MenialTasksiOS.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\iphonestyle">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>iphonestyle</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\public\menialtasks\src\views\iOS\Views.Main.fsx" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Views.Main</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\ResourceRules.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\ios\iphonestyle_6">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>iphonestyle_6</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <ConvertForm Include="Z:\code\repos\public\menialtasks\src\views\iOS\Views.Main.fsx">
+            <BaseName>Z:\code\repos\public\menialtasks\src\views\iOS\Views.Main.fmx</BaseName>
+        </ConvertForm>
+        <ConvertForm Include="Z:\code\repos\public\menialtasks\src\views\iOS\Views.Task.fsx">
+            <BaseName>Z:\code\repos\public\menialtasks\src\views\iOS\Views.Task.fmx</BaseName>
+        </ConvertForm>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>MenialTasksiOS.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_57x57.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_57x57.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_320x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Default.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Default@2x.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="..\..\bin\iOSSimulator\Debug\MenialTasksiOS.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="..\..\bin\iOSSimulator\Debug\MenialTasksiOS" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>MenialTasksiOS</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x1136.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Default-568h@2x.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="..\..\bin\iOSSimulator\Debug\MenialTasksiOS.rsm" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>MenialTasksiOS.rsm</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_114x114.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_114x114.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_SpotlightSearchIcon_29x29.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>FM_SpotlightSearchIcon_29x29.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="..\..\bin\iOSSimulator\Debug\MenialTasksiOS.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>MenialTasksiOS.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+</Project>

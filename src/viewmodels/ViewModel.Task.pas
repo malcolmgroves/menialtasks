@@ -35,7 +35,7 @@ end;
 
 procedure TTaskViewModel.Cancel;
 begin
-  // don't assign the staging back to FTask. SO what DO I do here?
+  // don't assign the staging back to FTask.
 end;
 
 constructor TTaskViewModel.Create(ATask : TTask);

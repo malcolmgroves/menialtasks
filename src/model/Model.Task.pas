@@ -9,16 +9,16 @@ type
   TTask = class(TPersistent)
   private
     FTitle: string;
-    FDue: TDateTime;
+    FDue: TDate;
     FDetails: string;
-    procedure SetDue(const Value: TDateTime);
+    procedure SetDue(const Value: TDate);
     function GetIsValid: Boolean;
   public
     constructor Create; virtual;
     procedure Assign(Source: TPersistent); override;
     property Title: string read FTitle write FTitle;
     property Details : string read FDetails write FDetails;
-    property Due: TDateTime read FDue write SetDue;
+    property Due: TDate read FDue write SetDue;
     property IsValid : Boolean read GetIsValid;
   end;
 
@@ -51,7 +51,7 @@ begin
   Result := Title <> '';
 end;
 
-procedure TTask.SetDue(const Value: TDateTime);
+procedure TTask.SetDue(const Value: TDate);
 begin
   if FDue <> Value then
   begin

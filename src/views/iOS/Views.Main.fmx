@@ -1,0 +1,109 @@
+object ViewMain: TViewMain
+  Left = 0
+  Top = 0
+  Caption = 'Form51'
+  ClientHeight = 460
+  ClientWidth = 320
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnDestroy = FormDestroy
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 480
+  DesignerDeviceName = 'iPhone'
+  DesignerOrientation = 0
+  object Header: TToolBar
+    Height = 44.000000000000000000
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = alCenter
+      Height = 33.000000000000000000
+      StyleLookup = 'toollabel'
+      Text = 'MenialTasks'
+      TextAlign = taCenter
+      Width = 133.000000000000000000
+    end
+    object Button1: TButton
+      Action = actAddTask
+      Height = 31.000000000000000000
+      Position.X = 279.000000000000000000
+      Position.Y = 6.000000000000000000
+      StyleLookup = 'addtoolbuttonbordered'
+      TabOrder = 1
+      Width = 33.000000000000000000
+    end
+  end
+  object Layout1: TLayout
+    Align = alClient
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 8.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    object ListBox1: TListBox
+      Touch.InteractiveGestures = [igPan]
+      Align = alClient
+      TabOrder = 0
+      DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnItemClick = ListBox1ItemClick
+    end
+  end
+  object TaskListBindSource: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'Title'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end
+      item
+        Name = 'Due'
+        FieldType = ftDateTime
+        Generator = 'DateTime'
+        ReadOnly = False
+      end
+      item
+        Name = 'Details'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    OnCreateAdapter = TaskListBindSourceCreateAdapter
+    Left = 24
+    Top = 72
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 76
+    Top = 69
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListBox1
+      Track = True
+      FillDataSource = TaskListBindSource
+      FillDisplayFieldName = 'Title'
+      AutoFill = True
+      BufferCount = -1
+      AutoBufferCount = False
+      FillExpressions = <
+        item
+          SourceMemberName = 'Details'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object ActionList1: TActionList
+    Left = 24
+    Top = 120
+    object actAddTask: TAction
+      Text = 'actAddTask'
+      OnExecute = actAddTaskExecute
+    end
+  end
+end
