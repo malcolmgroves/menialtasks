@@ -5,7 +5,7 @@ Coordinates=76,70,49,33
 Coordinates=17,70,54,51
 
 []
-Coordinates=0,0,75,33
+Coordinates=0,0,68,33
 
 [btnDone]
 Coordinates=10,140,56,51
@@ -42,4 +42,10 @@ Coordinates=490,70,46,51
 
 [BindingsList1]
 Coordinates=303,141,82,33
+
+[LayoutKeyboardShift]
+Coordinates=87,1,118,33
+
+[VertScrollBox1]
+Coordinates=394,159,88,33
 

@@ -7,6 +7,8 @@ object TaskView: TTaskView
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [dkDesktop]
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
   DesignerMobile = True
   DesignerWidth = 320
   DesignerHeight = 480
@@ -36,80 +38,90 @@ object TaskView: TTaskView
       Width = 73.000000000000000000
     end
   end
-  object Label1: TLabel
-    Height = 25.000000000000000000
-    Position.X = 11.000000000000000000
-    Position.Y = 56.000000000000000000
-    StyleLookup = 'listboxheaderlabel'
-    Text = 'Title'
-    Width = 120.000000000000000000
+  object LayoutKeyboardShift: TLayout
+    Align = alBottom
+    Height = 0.000000000000000000
+    Position.Y = 460.000000000000000000
   end
-  object Edit1: TEdit
-    Anchors = [akLeft, akTop, akRight]
-    TabOrder = 2
-    KeyboardType = vktDefault
-    Password = False
-    Text = 
-      'ipsum mi vehicula purus, eu congue sapien orci eu est. Morbi bla' +
-      'ndit volutpat ante, non ultrices eros semper at. Fusce leo leo, ' +
-      'mollis id viverra a, pulvinar non diam. Praesent ornare mauris a' +
-      'c magna placerat rutrum.Curabitur volutpat urna fermentum sem ia' +
-      'culis ultrices. Maecenas adipiscing sapien risus, nec consectetu' +
-      'r arcu. Sed in arcu iaculis felis placerat elementum vitae porta' +
-      ' libero. Donec quis purus nisi, ac ultrices lorem. Proin vitae d' +
-      'iam id turpis rhoncus vestibulum scelerisque vel leo. Nulla quis' +
-      ' scelerisque sem. Etiam imperdiet lacinia nulla sit amet varius.' +
-      ' Aliquam in interdum mauris. Praesent placerat, libero vel biben' +
-      'dum malesuada, velit libero vestibulum erat, vel porttitor diam ' +
-      'urna et nibh. Nullam fringilla cursus tempor. Cras eleifend male' +
-      'suada lacus quis consectetur. Cum sociis natoque penatibus et ma' +
-      'gnis dis parturient montes, nascetur ridiculus mus. Sed vestibul' +
-      'um bibendum sodales.Mauris consectetur ipsum ac turpis aliquam i' +
-      'd placerat justo ornare. Donec nisl arcu, faucibus vel dictum vi' +
-      'tae, dapibus vel mauris. Sed lacinia, elit ut commodo tempor, ma' +
-      'uris felis consequat nisl, sit amet laoreet est quam et tortor. ' +
-      'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
-      'por, velit sit'
-    Position.X = 11.000000000000000000
-    Position.Y = 86.000000000000000000
-    Width = 294.000000000000000000
-    Height = 31.000000000000000000
-  end
-  object CalendarEdit1: TCalendarEdit
-    TabOrder = 3
-    Cursor = crIBeam
-    Date = 41579.000000000000000000
-    Height = 31.000000000000000000
-    Position.X = 13.000000000000000000
-    Position.Y = 157.000000000000000000
-    Width = 292.000000000000000000
-  end
-  object Memo1: TMemo
+  object VertScrollBox1: TVertScrollBox
     Touch.InteractiveGestures = [igPan]
-    Height = 202.000000000000000000
-    Position.X = 16.000000000000000000
-    Position.Y = 239.000000000000000000
-    TabOrder = 4
-    Width = 289.000000000000000000
-    KeyboardType = vktDefault
-    Lines.Strings = (
-      'Lorem ipsum dolor sit amet')
-  end
-  object Label2: TLabel
-    Height = 25.000000000000000000
-    Position.X = 12.000000000000000000
-    Position.Y = 128.000000000000000000
-    StyleLookup = 'listboxheaderlabel'
-    Text = 'Due'
-    Width = 120.000000000000000000
-  end
-  object Label3: TLabel
-    Height = 25.000000000000000000
-    Position.X = 15.000000000000000000
-    Position.Y = 207.000000000000000000
-    StyleLookup = 'listboxheaderlabel'
-    Text = 'Details'
-    Width = 120.000000000000000000
+    Align = alClient
+    StyleLookup = 'scrollboxstyle'
+    TabOrder = 2
+    object CalendarEdit1: TCalendarEdit
+      TabOrder = 0
+      Cursor = crIBeam
+      Date = 41579.000000000000000000
+      Height = 31.000000000000000000
+      Position.X = 13.000000000000000000
+      Position.Y = 96.000000000000000000
+      Width = 292.000000000000000000
+    end
+    object Edit1: TEdit
+      TabOrder = 1
+      KeyboardType = vktDefault
+      Password = False
+      Text = 
+        'ipsum mi vehicula purus, eu congue sapien orci eu est. Morbi bla' +
+        'ndit volutpat ante, non ultrices eros semper at. Fusce leo leo, ' +
+        'mollis id viverra a, pulvinar non diam. Praesent ornare mauris a' +
+        'c magna placerat rutrum.Curabitur volutpat urna fermentum sem ia' +
+        'culis ultrices. Maecenas adipiscing sapien risus, nec consectetu' +
+        'r arcu. Sed in arcu iaculis felis placerat elementum vitae porta' +
+        ' libero. Donec quis purus nisi, ac ultrices lorem. Proin vitae d' +
+        'iam id turpis rhoncus vestibulum scelerisque vel leo. Nulla quis' +
+        ' scelerisque sem. Etiam imperdiet lacinia nulla sit amet varius.' +
+        ' Aliquam in interdum mauris. Praesent placerat, libero vel biben' +
+        'dum malesuada, velit libero vestibulum erat, vel porttitor diam ' +
+        'urna et nibh. Nullam fringilla cursus tempor. Cras eleifend male' +
+        'suada lacus quis consectetur. Cum sociis natoque penatibus et ma' +
+        'gnis dis parturient montes, nascetur ridiculus mus. Sed vestibul' +
+        'um bibendum sodales.Mauris consectetur ipsum ac turpis aliquam i' +
+        'd placerat justo ornare. Donec nisl arcu, faucibus vel dictum vi' +
+        'tae, dapibus vel mauris. Sed lacinia, elit ut commodo tempor, ma' +
+        'uris felis consequat nisl, sit amet laoreet est quam et tortor. ' +
+        'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
+        'por, velit sit'
+      Position.X = 11.000000000000000000
+      Position.Y = 35.000000000000000000
+      Width = 294.000000000000000000
+      Height = 31.000000000000000000
+    end
+    object Label1: TLabel
+      Height = 25.000000000000000000
+      Position.X = 11.000000000000000000
+      Position.Y = 6.000000000000000000
+      StyleLookup = 'listboxheaderlabel'
+      Text = 'Title'
+      Width = 120.000000000000000000
+    end
+    object Label2: TLabel
+      Height = 25.000000000000000000
+      Position.X = 12.000000000000000000
+      Position.Y = 70.000000000000000000
+      StyleLookup = 'listboxheaderlabel'
+      Text = 'Due'
+      Width = 120.000000000000000000
+    end
+    object Label3: TLabel
+      Height = 25.000000000000000000
+      Position.X = 15.000000000000000000
+      Position.Y = 143.000000000000000000
+      StyleLookup = 'listboxheaderlabel'
+      Text = 'Details'
+      Width = 120.000000000000000000
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [igPan]
+      Height = 216.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 177.000000000000000000
+      TabOrder = 5
+      Width = 289.000000000000000000
+      KeyboardType = vktDefault
+      Lines.Strings = (
+        'Lorem ipsum dolor sit amet')
+    end
   end
   object ActionList1: TActionList
     Left = 264

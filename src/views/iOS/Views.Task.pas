@@ -29,6 +29,8 @@ type
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
+    LayoutKeyboardShift: TLayout;
+    VertScrollBox1: TVertScrollBox;
     procedure TaskBindSourceCreateAdapter(Sender: TObject;
       var ABindSourceAdapter: TBindSourceAdapter);
     procedure LinkControlToField3AssignedValue(Sender: TObject;
@@ -36,6 +38,10 @@ type
     procedure actCancelExecute(Sender: TObject);
     procedure actSaveExecute(Sender: TObject);
     procedure actSaveUpdate(Sender: TObject);
+    procedure FormVirtualKeyboardHidden(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
+    procedure FormVirtualKeyboardShown(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
   private
     FViewModel : TTaskViewModel;
     FAutoPosting : Boolean;
@@ -49,7 +55,7 @@ var
 
 implementation
 uses
-  Model.Task;
+  Model.Task, FMX.InertialMovement;
 
 {$R *.fmx}
 
@@ -74,6 +80,32 @@ begin
   FAutoPosting := False;
 
   inherited Create(AOwner);
+end;
+
+procedure TTaskView.FormVirtualKeyboardHidden(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+begin
+  LayoutKeyboardShift.Visible := False;
+  VertScrollBox1.AniCalculations.ViewportPosition := TPointD.Create(0, 1);
+//  VertScrollBox1.AnimateFloatDelay('VScrollBar.Value', FocusedControl.AbsoluteRect.Top - 80, 0.2, 0.2);
+end;
+
+procedure TTaskView.FormVirtualKeyboardShown(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+var
+  FocusedControl: TControl;
+begin
+  // Make shift of VertScrollBox1 on keyboard's height
+  LayoutKeyboardShift.Visible := True;
+  LayoutKeyboardShift.Height := Bounds.Height;
+  // We Make ocontent ffset to focused control
+  if Assigned(Focused) and (Focused.GetObject is TControl) then
+  begin
+    FocusedControl := TControl(Focused.GetObject);
+    if (FocusedControl.AbsoluteRect.IntersectsWith(TRectF.Create(Bounds))) then
+      VertScrollBox1.AnimateFloatDelay('VScrollBar.Value', FocusedControl.AbsoluteRect.Top - 80, 0.2, 0.2);
+
+  end;
 end;
 
 procedure TTaskView.LinkControlToField3AssignedValue(Sender: TObject;
