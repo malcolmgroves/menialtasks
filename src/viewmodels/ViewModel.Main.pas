@@ -5,12 +5,11 @@ uses
   Model.TaskList, ViewModel.Task, Model.Task;
 
 type
-  TOnEditTask = reference to function (Sender : TObject; TaskViewModel : TTaskViewModel) : boolean;
+  TOnEditTask = reference to procedure (Sender : TObject; TaskViewModel : TTaskViewModel);
   TMainViewModel = class
   private
     FTasks : TTaskList;
     FOnEditTask: TOnEditTask;
-    function DoOnEditTask(TaskViewModel : TTaskViewModel): boolean; virtual;
   public
     constructor Create;
     destructor Destroy; override;
@@ -32,12 +31,12 @@ var
 begin
   NewTask := TTask.Create;
   LTaskViewModel := TTaskViewModel.Create(NewTask);
-  try
-    if DoOnEditTask(LTaskViewModel) then
-      Tasks.AddTask(NewTask);
-  finally
-    LTaskViewModel.Free;
-  end;
+  LTaskViewModel.OnSaveTask := procedure(Sender : TTaskViewModel; Task : TTask)
+                               begin
+                                 Tasks.AddTask(Task);
+                               end;
+  if Assigned(FOnEditTask) then
+    FOnEditTask(self, LTaskViewModel);
 end;
 
 constructor TMainViewModel.Create;
@@ -51,24 +50,13 @@ begin
   inherited;
 end;
 
-function TMainViewModel.DoOnEditTask(TaskViewModel : TTaskViewModel) : boolean;
-begin
-  if Assigned(FOnEditTask) then
-    Result := FOnEditTask(self, TaskViewModel)
-  else
-    Result := False;
-end;
-
 procedure TMainViewModel.EditTask(ATask: TTask);
 var
   LTaskViewModel : TTaskViewModel;
 begin
   LTaskViewModel := TTaskViewModel.Create(ATask);
-  try
-    DoOnEditTask(LTaskViewModel);
-  finally
-    LTaskViewModel.Free;
-  end;
+  if Assigned(FOnEditTask) then
+    FOnEditTask(self, LTaskViewModel);
 end;
 
 end.

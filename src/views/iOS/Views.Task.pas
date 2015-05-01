@@ -8,7 +8,11 @@ uses
   Data.Bind.Components, Data.Bind.ObjectScope, System.Actions, FMX.ActnList,
   FMX.StdCtrls, ViewModel.Task, FMX.Layouts, FMX.Memo,
   FMX.Edit, FMX.ExtCtrls, System.Rtti, System.Bindings.Outputs,
-  Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt;
+  Fmx.Bind.Editors, Data.Bind.EngExt, Fmx.Bind.DBEngExt, FMX.DateTimeCtrls
+//{$IF CompilerVersion < 19.0}
+//  , Fmx.DateTimeCtrls
+//{$IFEND}
+;
 
 type
   TTaskView = class(TForm)
@@ -44,7 +48,7 @@ type
       KeyboardVisible: Boolean; const Bounds: TRect);
   private
     FViewModel : TTaskViewModel;
-    FAutoPosting : Boolean;
+//    FAutoPosting : Boolean;
   public
     constructor Create(AOwner: TComponent; AViewModel : TTaskViewModel); reintroduce;
 
@@ -77,7 +81,7 @@ end;
 constructor TTaskView.Create(AOwner: TComponent; AViewModel: TTaskViewModel);
 begin
   FViewModel := AViewModel;
-  FAutoPosting := False;
+//  FAutoPosting := False;
 
   inherited Create(AOwner);
 end;
@@ -112,18 +116,18 @@ procedure TTaskView.LinkControlToField3AssignedValue(Sender: TObject;
   AssignValueRec: TBindingAssignValueRec; const Value: TValue);
 begin
   // auto-post changes back to the adapted object
-  if TaskBindSource.Editing then
-  begin
-    if not FAutoPosting then
-    begin
-      FAutoPosting := True;
-      try
-        TaskBindSource.Post;
-      finally
-        FAutoPosting := False;
-      end;
-    end;
-  end;
+//  if TaskBindSource.Editing then
+//  begin
+//    if not FAutoPosting then
+//    begin
+//      FAutoPosting := True;
+//      try
+//        TaskBindSource.Post;
+//      finally
+//        FAutoPosting := False;
+//      end;
+//    end;
+//  end;
 end;
 
 procedure TTaskView.TaskBindSourceCreateAdapter(Sender: TObject;
@@ -132,6 +136,7 @@ begin
   ABindSourceAdapter := TObjectBindSourceAdapter<TTask>.Create(TaskBindSource,
                                                                FViewModel.Task,
                                                                False);
+  ABindSourceAdapter.AutoPost := True;
 end;
 
 end.

@@ -1,43 +1,68 @@
-# Compiled source #
+# Compiled source 
+#
 ###################
+
 *.dcu
+
 *.obj
+
 *.exe
+
 *.ico
+
 *.rsm
+
 *.plist
+
 *.icns
 
-# Backup files    #
+
+# Backup files    
+#
 ###################
+
 *.~*
 
-# IDE Files	  #
+
+# IDE Files	  
+#
 ###################
+
 *.dproj.local
+
 *.groupproj.local
+
 *.identcache
+
 *.dsk
+
 *.tvsconfig
+
 *.txaPackage
 
-# Output Folders  #
+
+# Output Folders  
+#
 ###################
-/OSX32
-/Win32
-/Win64
-/Debug
-/bin
+
+src/projects/OSX32
+src/projects/Win32
+src/projects/Win64
+src/projects/Android
+src/projects/iOSDevice
+src/projects/iOSSimulator
+bin
 
 
-# svn             #
+
+# svn             
+#
 ###################
+
 /.svn
+
 *.svn-base
 all-wcprops
 entries
 
 
-
-OpenDocument/OSX32/Debug/OpenDocument
-OpenDocument/OSX32

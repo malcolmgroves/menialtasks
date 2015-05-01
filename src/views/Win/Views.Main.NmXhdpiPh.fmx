@@ -1,0 +1,77 @@
+inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited MultiView1: TMultiView [0]
+    Size.Height = 615.000000000000000000
+    Visible = False
+    inherited Rectangle1: TRectangle
+      Size.Height = 615.000000000000000000
+      inherited ListBox1: TListBox
+        Margins.Left = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 232.000000000000000000
+        Size.Height = 566.000000000000000000
+        Viewport.Width = 232.000000000000000000
+        Viewport.Height = 542.000000000000000000
+      end
+    end
+  end
+  inherited Panel3: TPanel [1]
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited ToolBar1: TToolBar
+      Size.Width = 352.000000000000000000
+      Size.Height = 48.000000000000000000
+      TabOrder = 15
+      inherited Button1: TButton
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        StyleLookup = 'detailstoolbutton'
+      end
+      inherited NavigatorViewModelBindSource: TBindNavigator
+        Position.X = 56.000000000000000000
+        Size.Height = 48.000000000000000000
+        Visible = False
+      end
+      inherited Button2: TButton
+        Align = Right
+        Position.X = 240.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        StyleLookup = 'addtoolbutton'
+      end
+      inherited Button3: TButton
+        Align = Right
+        Position.X = 296.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        StyleLookup = 'composetoolbutton'
+        TabOrder = 4
+      end
+      inherited Label2: TLabel
+        Size.Width = 138.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    inherited Rectangle2: TRectangle
+      Size.Width = 352.000000000000000000
+      Size.Height = 519.000000000000000000
+      inherited Line1: TLine
+        Size.Width = 296.000000000000000000
+      end
+      inherited Text1: TText
+        Size.Width = 336.000000000000000000
+      end
+      inherited Text2: TText
+        Size.Width = 336.000000000000000000
+        Size.Height = 413.000000000000000000
+      end
+      inherited Circle1: TCircle
+        Position.X = 294.000000000000000000
+      end
+    end
+  end
+end

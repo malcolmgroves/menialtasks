@@ -1,88 +1,180 @@
 object TaskView: TTaskView
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 294
-  ClientWidth = 353
+  Caption = 'Task Details'
+  ClientHeight = 422
+  ClientWidth = 751
   FormFactor.Width = 1680
   FormFactor.Height = 1050
-  FormFactor.Devices = [dkDesktop]
-  object Button1: TButton
-    Action = actCancel
-    DisableFocusEffect = False
-    Height = 22.000000000000000000
-    ModalResult = 2
-    Position.X = 256.000000000000000000
-    Position.Y = 256.000000000000000000
-    Width = 80.000000000000000000
-  end
-  object Button2: TButton
-    Action = actSave
-    DisableFocusEffect = False
-    Height = 22.000000000000000000
-    ModalResult = 1
-    Position.X = 168.000000000000000000
-    Position.Y = 256.000000000000000000
-    Width = 80.000000000000000000
-  end
-  object EditTitle: TEdit
-    Anchors = [akLeft, akTop, akRight]
-    DisableFocusEffect = False
-    KeyboardType = vktDefault
-    Password = False
-    Text = 'ipsum mi vehicula purus'
-    Position.X = 48.000000000000000000
-    Position.Y = 16.000000000000000000
-    Width = 289.000000000000000000
-    Height = 22.000000000000000000
-    object Label1: TLabel
-      Height = 15.000000000000000000
-      Position.X = -32.000000000000000000
-      Position.Y = 2.000000000000000000
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object ListBox1: TListBox
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Size.Width = 735.000000000000000000
+    Size.Height = 378.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 6
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 735.000000000000000000
+    Viewport.Height = 378.000000000000000000
+    object ListBoxGroupHeader1: TListBoxGroupHeader
+      TabOrder = 3
+      Text = 'Task Details'
+      Visible = False
+    end
+    object lbiTitle: TListBoxItem
+      Padding.Left = 100.000000000000000000
+      Padding.Top = 8.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Padding.Bottom = 8.000000000000000000
+      Position.Y = 19.000000000000000000
+      Size.Width = 735.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 0
       Text = 'Title'
-      Width = 49.000000000000000000
-      WordWrap = False
+      object EditTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 1
+        Text = 
+          'ipsum mi vehicula purus, eu congue sapien orci eu est. Morbi bla' +
+          'ndit volutpat ante, non ultrices eros semper at. Fusce leo leo, ' +
+          'mollis id viverra a, pulvinar non diam. Praesent ornare mauris a' +
+          'c magna placerat rutrum.Curabitur volutpat urna fermentum sem ia' +
+          'culis ultrices. Maecenas adipiscing sapien risus, nec consectetu' +
+          'r arcu. Sed in arcu iaculis felis placerat elementum vitae porta' +
+          ' libero. Donec quis purus nisi, ac ultrices lorem. Proin vitae d' +
+          'iam id turpis rhoncus vestibulum scelerisque vel leo. Nulla quis' +
+          ' scelerisque sem. Etiam imperdiet lacinia nulla sit amet varius.' +
+          ' Aliquam in interdum mauris. Praesent placerat, libero vel biben' +
+          'dum malesuada, velit libero vestibulum erat, vel porttitor diam ' +
+          'urna et nibh. Nullam fringilla cursus tempor. Cras eleifend male' +
+          'suada lacus quis consectetur. Cum sociis natoque penatibus et ma' +
+          'gnis dis parturient montes, nascetur ridiculus mus. Sed vestibul' +
+          'um bibendum sodales.Mauris consectetur ipsum ac turpis aliquam i' +
+          'd placerat justo ornare. Donec nisl arcu, faucibus vel dictum vi' +
+          'tae, dapibus vel mauris. Sed lacinia, elit ut commodo tempor, ma' +
+          'uris felis consequat nisl, sit amet laoreet est quam et tortor. ' +
+          'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
+          'por, velit sit'
+        Size.Width = 627.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+      end
     end
-  end
-  object CalendarEditDue: TCalendarEdit
-    Anchors = [akLeft, akTop, akRight]
-    Cursor = crIBeam
-    Date = 41213.040277777780000000
-    DisableFocusEffect = False
-    Height = 22.000000000000000000
-    Position.X = 48.000000000000000000
-    Position.Y = 56.000000000000000000
-    Width = 289.000000000000000000
-    object Label2: TLabel
-      Height = 15.000000000000000000
-      Position.X = -32.000000000000000000
-      Position.Y = 2.000000000000000000
+    object lbiDue: TListBoxItem
+      Padding.Left = 100.000000000000000000
+      Padding.Top = 8.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Padding.Bottom = 8.000000000000000000
+      Position.Y = 59.000000000000000000
+      Size.Width = 735.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 1
       Text = 'Due'
-      Width = 41.000000000000000000
-      WordWrap = False
+      object DateEdit1: TDateEdit
+        Date = 42309.000000000000000000
+        Align = Client
+        Size.Width = 627.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object lbiDetails: TListBoxItem
+      Padding.Left = 100.000000000000000000
+      Padding.Top = 8.000000000000000000
+      Padding.Right = 8.000000000000000000
+      Padding.Bottom = 8.000000000000000000
+      Position.Y = 99.000000000000000000
+      Size.Width = 735.000000000000000000
+      Size.Height = 243.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxitemnodetail'
+      TabOrder = 2
+      Text = 'Details'
+      object MemoDetails: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          'Lorem ipsum dolor sit amet')
+        TextSettings.WordWrap = True
+        Align = Client
+        Size.Width = 627.000000000000000000
+        Size.Height = 227.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 623.000000000000000000
+        Viewport.Height = 223.000000000000000000
+      end
+    end
+    object ListBoxGroupFooter1: TListBoxGroupFooter
+      Position.Y = 342.000000000000000000
+      StyleLookup = 'listboxplainheader'
+      TabOrder = 4
+      Visible = False
     end
   end
-  object MemoDetails: TMemo
-    Touch.InteractiveGestures = [igPan]
-    Anchors = [akLeft, akTop, akRight, akBottom]
-    Height = 145.000000000000000000
-    Position.X = 48.000000000000000000
-    Position.Y = 96.000000000000000000
-    Width = 289.000000000000000000
-    DisableFocusEffect = False
-    KeyboardType = vktDefault
-    Lines.Strings = (
-      'Lorem ipsum dolor sit amet')
-    WordWrap = True
-  end
-  object Label3: TLabel
-    Height = 15.000000000000000000
-    Position.Y = 96.000000000000000000
-    Text = 'Details'
-    Width = 49.000000000000000000
+  object ToolBar1: TToolBar
+    Align = Bottom
+    Position.Y = 386.000000000000000000
+    Size.Width = 751.000000000000000000
+    Size.Height = 36.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    object Button1: TButton
+      Action = actCancel
+      Anchors = [akTop, akRight]
+      Enabled = True
+      ImageIndex = -1
+      ModalResult = 2
+      Position.X = 664.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Visible = True
+    end
+    object Button2: TButton
+      Action = actSave
+      Anchors = [akTop, akRight]
+      Default = True
+      Enabled = True
+      ImageIndex = -1
+      ModalResult = 1
+      Position.X = 576.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Visible = True
+    end
+    object Label1: TLabel
+      Align = Center
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Task Details'
+      Visible = False
+    end
   end
   object TaskBindSource: TPrototypeBindSource
     AutoActivate = True
+    AutoPost = True
     FieldDefs = <
       item
         Name = 'Title'
@@ -91,8 +183,8 @@ object TaskView: TTaskView
       end
       item
         Name = 'Due'
-        FieldType = ftDateTime
-        Generator = 'DateTime'
+        FieldType = ftDate
+        Generator = 'Date'
         ReadOnly = False
       end
       item
@@ -103,12 +195,12 @@ object TaskView: TTaskView
       end>
     ScopeMappings = <>
     OnCreateAdapter = TaskBindSourceCreateAdapter
-    Left = 224
-    Top = 160
+    Left = 384
+    Top = 184
   end
   object ActionList1: TActionList
-    Left = 72
-    Top = 176
+    Left = 424
+    Top = 256
     object actSave: TAction
       Text = 'Save'
       OnExecute = actSaveExecute
@@ -122,23 +214,13 @@ object TaskView: TTaskView
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    UseAppManager = True
-    Left = 12
-    Top = 5
+    Left = 236
+    Top = 245
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = TaskBindSource
       FieldName = 'Title'
       Control = EditTitle
-      OnAssignedValue = LinkControlToField1AssignedValue
-      Track = False
-    end
-    object LinkControlToField2: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = TaskBindSource
-      FieldName = 'Due'
-      Control = CalendarEditDue
-      OnAssignedValue = LinkControlToField1AssignedValue
       Track = False
     end
     object LinkControlToField3: TLinkControlToField
@@ -146,8 +228,14 @@ object TaskView: TTaskView
       DataSource = TaskBindSource
       FieldName = 'Details'
       Control = MemoDetails
-      OnAssignedValue = LinkControlToField1AssignedValue
       Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = TaskBindSource
+      FieldName = 'Due'
+      Control = DateEdit1
+      Track = True
     end
   end
 end

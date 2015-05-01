@@ -34,9 +34,9 @@ end;
 
 procedure TestTMainViewModel.TestTaskAddedOnSave;
 begin
-  FMainViewModel.OnEditTask := function (Sender : TObject; TaskViewModel : TTaskViewModel): boolean
+  FMainViewModel.OnEditTask := procedure (Sender : TObject; TaskViewModel : TTaskViewModel)
                                begin
-                                 Result := True; // Save was pressed
+                                 TaskViewModel.Save;
                                end;
 
   FMainViewModel.AddNewTask;
@@ -45,9 +45,9 @@ end;
 
 procedure TestTMainViewModel.TestTaskNotAddedOnCancel;
 begin
-  FMainViewModel.OnEditTask := function (Sender : TObject; TaskViewModel : TTaskViewModel): boolean
+  FMainViewModel.OnEditTask := procedure (Sender : TObject; TaskViewModel : TTaskViewModel)
                                begin
-                                 Result := False; // Save was not pressed
+                                 TaskViewModel.Cancel;
                                end;
 
   FMainViewModel.AddNewTask;

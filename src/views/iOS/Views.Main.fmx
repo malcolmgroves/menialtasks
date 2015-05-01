@@ -2,7 +2,7 @@ object ViewMain: TViewMain
   Left = 0
   Top = 0
   Caption = 'Form51'
-  ClientHeight = 460
+  ClientHeight = 508
   ClientWidth = 320
   FormFactor.Width = 1440
   FormFactor.Height = 900
@@ -10,40 +10,46 @@ object ViewMain: TViewMain
   OnDestroy = FormDestroy
   DesignerMobile = True
   DesignerWidth = 320
-  DesignerHeight = 480
-  DesignerDeviceName = 'iPhone'
+  DesignerHeight = 533
+  DesignerDeviceName = 'Samsung Galaxy S2'
   DesignerOrientation = 0
   object Header: TToolBar
-    Height = 44.000000000000000000
+    Height = 48.000000000000000000
+    Padding.Left = 8.000000000000000000
+    Padding.Right = 8.000000000000000000
     TabOrder = 0
+    Width = 320.000000000000000000
     object HeaderLabel: TLabel
       Align = alCenter
       Height = 33.000000000000000000
       StyleLookup = 'toollabel'
       Text = 'MenialTasks'
       TextAlign = taCenter
-      Width = 133.000000000000000000
+      Width = 166.000000000000000000
     end
     object Button1: TButton
       Action = actAddTask
-      Height = 31.000000000000000000
-      Position.X = 279.000000000000000000
-      Position.Y = 6.000000000000000000
+      Align = alRight
+      Height = 48.000000000000000000
+      Position.X = 264.000000000000000000
       StyleLookup = 'addtoolbuttonbordered'
       TabOrder = 1
-      Width = 33.000000000000000000
+      Width = 48.000000000000000000
     end
   end
   object Layout1: TLayout
     Align = alClient
+    Height = 460.000000000000000000
     Padding.Left = 8.000000000000000000
     Padding.Top = 8.000000000000000000
     Padding.Right = 8.000000000000000000
     Padding.Bottom = 8.000000000000000000
+    Width = 320.000000000000000000
     object ListBox1: TListBox
-      Touch.InteractiveGestures = [igPan]
       Align = alClient
+      Height = 444.000000000000000000
       TabOrder = 0
+      Width = 304.000000000000000000
       ItemIndex = 0
       DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
       DefaultItemStyles.GroupHeaderStyle = ''

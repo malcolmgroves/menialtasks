@@ -93,7 +93,7 @@ end;
 
 procedure TViewMain.actAddTaskExecute(Sender: TObject);
 begin
-  ViewModel.AddNewTask;
+  FViewModel.AddNewTask;
   RefreshBindings;
 end;
 

@@ -2,37 +2,38 @@ object TaskView: TTaskView
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 460
+  ClientHeight = 508
   ClientWidth = 320
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [dkDesktop]
-  OnVirtualKeyboardShown = FormVirtualKeyboardShown
-  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
   DesignerMobile = True
   DesignerWidth = 320
-  DesignerHeight = 480
-  DesignerDeviceName = 'iPhone'
+  DesignerHeight = 533
+  DesignerDeviceName = 'Samsung Galaxy S2'
   DesignerOrientation = 0
   object Header: TToolBar
-    Height = 44.000000000000000000
+    Height = 48.000000000000000000
+    Padding.Left = 8.000000000000000000
+    Padding.Right = 8.000000000000000000
     TabOrder = 0
+    Width = 320.000000000000000000
     object btnBack: TButton
       Action = actCancel
-      Height = 31.000000000000000000
+      Align = alLeft
+      Height = 48.000000000000000000
       ModalResult = 2
       Position.X = 8.000000000000000000
-      Position.Y = 6.000000000000000000
       StyleLookup = 'backtoolbutton'
       TabOrder = 0
       Width = 73.000000000000000000
     end
     object btnDone: TButton
       Action = actSave
-      Height = 31.000000000000000000
+      Align = alRight
+      Height = 48.000000000000000000
       ModalResult = 1
-      Position.X = 238.000000000000000000
-      Position.Y = 6.000000000000000000
+      Position.X = 239.000000000000000000
       StyleLookup = 'donetoolbutton'
       TabOrder = 1
       Width = 73.000000000000000000
@@ -41,26 +42,33 @@ object TaskView: TTaskView
   object LayoutKeyboardShift: TLayout
     Align = alBottom
     Height = 0.000000000000000000
-    Position.Y = 460.000000000000000000
+    Position.Y = 508.000000000000000000
+    Width = 320.000000000000000000
   end
   object VertScrollBox1: TVertScrollBox
-    Touch.InteractiveGestures = [igPan]
     Align = alClient
-    StyleLookup = 'scrollboxstyle'
+    Height = 444.000000000000000000
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
     TabOrder = 2
+    Width = 304.000000000000000000
     object CalendarEdit1: TCalendarEdit
+      Touch.InteractiveGestures = [igDoubleTap, igLongTap]
+      Align = alTop
       TabOrder = 0
       Cursor = crIBeam
       Date = 41579.000000000000000000
-      Height = 31.000000000000000000
-      Position.X = 13.000000000000000000
-      Position.Y = 96.000000000000000000
-      Width = 292.000000000000000000
+      Height = 32.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.Y = 106.000000000000000000
+      Width = 304.000000000000000000
     end
     object Edit1: TEdit
+      Touch.InteractiveGestures = [igDoubleTap, igLongTap]
+      Align = alTop
       TabOrder = 1
-      KeyboardType = vktDefault
-      Password = False
       Text = 
         'ipsum mi vehicula purus, eu congue sapien orci eu est. Morbi bla' +
         'ndit volutpat ante, non ultrices eros semper at. Fusce leo leo, ' +
@@ -82,43 +90,44 @@ object TaskView: TTaskView
         'uris felis consequat nisl, sit amet laoreet est quam et tortor. ' +
         'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
         'por, velit sit'
-      Position.X = 11.000000000000000000
-      Position.Y = 35.000000000000000000
-      Width = 294.000000000000000000
-      Height = 31.000000000000000000
+      Position.Y = 33.000000000000000000
+      Width = 304.000000000000000000
+      Height = 32.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      KillFocusByReturn = False
     end
     object Label1: TLabel
+      Align = alTop
       Height = 25.000000000000000000
-      Position.X = 11.000000000000000000
-      Position.Y = 6.000000000000000000
+      Margins.Bottom = 8.000000000000000000
       StyleLookup = 'listboxheaderlabel'
       Text = 'Title'
-      Width = 120.000000000000000000
+      Width = 304.000000000000000000
     end
     object Label2: TLabel
+      Align = alTop
       Height = 25.000000000000000000
-      Position.X = 12.000000000000000000
-      Position.Y = 70.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.Y = 73.000000000000000000
       StyleLookup = 'listboxheaderlabel'
       Text = 'Due'
-      Width = 120.000000000000000000
+      Width = 304.000000000000000000
     end
     object Label3: TLabel
+      Align = alTop
       Height = 25.000000000000000000
-      Position.X = 15.000000000000000000
-      Position.Y = 143.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Position.Y = 146.000000000000000000
       StyleLookup = 'listboxheaderlabel'
       Text = 'Details'
-      Width = 120.000000000000000000
+      Width = 304.000000000000000000
     end
     object Memo1: TMemo
-      Touch.InteractiveGestures = [igPan]
-      Height = 216.000000000000000000
-      Position.X = 16.000000000000000000
-      Position.Y = 177.000000000000000000
+      Touch.InteractiveGestures = [igPan, igDoubleTap, igLongTap]
+      Align = alClient
+      Height = 265.000000000000000000
       TabOrder = 5
-      Width = 289.000000000000000000
-      KeyboardType = vktDefault
+      Width = 304.000000000000000000
       Lines.Strings = (
         'Lorem ipsum dolor sit amet')
     end
@@ -138,7 +147,7 @@ object TaskView: TTaskView
   end
   object TaskBindSource: TPrototypeBindSource
     AutoActivate = True
-    AutoPost = False
+    AutoPost = True
     FieldDefs = <
       item
         Name = 'Title'

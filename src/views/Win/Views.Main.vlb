@@ -1,17 +1,17 @@
 ﻿[ViewModelBindSource]
-Coordinates=10,10,139,69
+Coordinates=20,330,139,69
 
 [ViewModelGeneratorAdapter]
 Visible=False
-Coordinates=10,10,139,69
+Coordinates=20,330,139,69
 
 []
-Coordinates=280,60,46,51
+Coordinates=341,90,70,33
 Visible=False
 ExplicitSubNodes=Selected.Text
 
 [TaskListBindSource]
-Coordinates=50,120,113,123
+Coordinates=20,80,113,159
 
 [Button2]
 Coordinates=168,1,53,51
@@ -22,20 +22,70 @@ Coordinates=547,1,175,69
 
 [TaskView.TaskBindSource]
 Coordinates=560,20,145,105
-
-[Grid1]
-Coordinates=400,140,53,87
-
-[Label2]
-Coordinates=290,120,46,51
+Visible=False
 
 [Button3]
 Coordinates=168,71,53,51
 Visible=False
 
-[MemoDetails]
-Coordinates=290,210,77,51
+[ActionList1]
+Coordinates=341,90,70,33
+
+[BindingsList1]
+Coordinates=470,1,82,33
+
+[Rectangle1]
+Coordinates=119,98,80,36
+Visible=False
+
+[ListBox1]
+Coordinates=380,230,89,195
+
+[Label1]
+Coordinates=202,572,53,58
+Visible=False
+
+[Panel3]
+Coordinates=387,572,54,36
+Visible=False
+
+[Rectangle2]
+Coordinates=281,572,80,36
+Visible=False
+
+[Text1]
+Coordinates=360,20,41,51
+
+[Line1]
+Coordinates=10,678,46,36
+Visible=False
+
+[Text2]
+Coordinates=360,160,41,51
+
+[Circle1]
+Coordinates=467,572,55,36
+Visible=False
+
+[Text3]
+Coordinates=360,90,41,51
+
+[MultiView1]
+Coordinates=30,280,67,33
+Visible=False
+
+[Label2]
+Coordinates=10,220,46,51
+Visible=False
+
+[ToolBar1]
+Coordinates=110,280,58,33
+Visible=False
+
+[Button1]
+Coordinates=70,220,53,51
+Visible=False
 
 [NavigatorViewModelBindSource]
-Coordinates=260,20,172,51
+Coordinates=20,260,172,51
 

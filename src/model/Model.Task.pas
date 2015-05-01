@@ -5,7 +5,6 @@ uses
   System.Classes;
 
 type
-  TTaskStatus = (New, Started, Complete);
   TTask = class(TPersistent)
   private
     FTitle: string;
@@ -47,7 +46,6 @@ end;
 
 function TTask.GetIsValid: Boolean;
 begin
-  { TODO : THis really needs to hook into a more general validation approach }
   Result := Title <> '';
 end;
 
@@ -55,7 +53,7 @@ procedure TTask.SetDue(const Value: TDate);
 begin
   if FDue <> Value then
   begin
-    if CompareDateTime(Now, Value) = GreaterThanValue then
+    if CompareDate(Now, Value) = GreaterThanValue then
       raise PastTaskException.Create(Format('Current DateTime %s : Task Due : %s',
                                             [DateTimeToStr(Now), DateTimeToStr(Value)]));
     FDue := Value;

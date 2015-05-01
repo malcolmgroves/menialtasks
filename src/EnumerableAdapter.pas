@@ -18,7 +18,7 @@ type
   public
     procedure Edit(AForce: Boolean); override;
     procedure Reload; virtual; // Reload enumerator
-    procedure Cancel;  // Cancel pending edits
+    procedure Cancel; reintroduce;  // Cancel pending edits
   end;
 
   TEnumerableBindSourceAdapter<T: class> = class(TBaseEnumerableBindSourceAdapter)

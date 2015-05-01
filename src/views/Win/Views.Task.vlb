@@ -1,35 +1,68 @@
 ﻿[TaskBindSource]
-Coordinates=10,110,109,124
+Coordinates=10,30,95,105
 
 [Button1]
-Coordinates=80,240,53,51
+Coordinates=80,240,53,33
 Visible=False
 
 [Button2]
-Coordinates=20,240,53,51
+Coordinates=20,240,53,33
 Visible=False
 
 [EditTitle]
-Coordinates=240,80,62,58
-
-[Label1]
-Coordinates=190,240,46,51
-Visible=False
-
-[CalendarEditDue]
-Coordinates=235,141,112,58
-
-[Label2]
-Coordinates=140,240,46,51
-Visible=False
+Coordinates=270,10,54,51
 
 []
-Coordinates=68,1,46,51
+Coordinates=138,12,87,36
 Visible=False
 
 [MemoDetails]
-Coordinates=240,210,89,58
+Coordinates=260,140,77,51
 
-[Label3]
-Coordinates=96,1,53,58
+[BindingsList1]
+Coordinates=124,71,82,33
+
+[ActionList1]
+Coordinates=124,123,70,33
+
+[actSave]
+Coordinates=65,154,53,33
+
+[actCancel]
+Coordinates=244,225,62,33
+
+[ListBox1]
+Coordinates=354,237,57,33
+Visible=False
+
+[DateEdit1]
+Coordinates=260,70,115,51
+
+[lbiTitle]
+Coordinates=145,228,47,33
+Visible=False
+
+[lbiDue]
+Coordinates=0,192,45,33
+Visible=False
+
+[lbiDetails]
+Coordinates=225,266,60,33
+Visible=False
+
+[Label1]
+Coordinates=330,260,46,33
+Visible=False
+
+[ListBoxGroupFooter1]
+Coordinates=50,260,120,33
+Visible=False
+
+[ListBoxGroupHeader1]
+Coordinates=402,1,123,33
+Visible=False
+
+[ToolBar1]
+Coordinates=210,270,58,33
+Visible=False
 

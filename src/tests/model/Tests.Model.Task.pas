@@ -58,7 +58,7 @@ end;
 procedure TestTTask.TestCreateTaskDueInThePast;
 begin
   StartExpectingException(PastTaskException);
-  FTask.Due := IncMinute(Now, -10);
+  FTask.Due := IncDay(Now, -1);
   StopExpectingException();
 end;
 
