@@ -50,12 +50,15 @@ inherited TaskView_iPhone4in: TTaskView_iPhone4in
     Size.Height = 44.000000000000000000
     inherited Button1: TButton
       Align = Left
+      Size.Width = 89.000000000000000000
       Size.Height = 44.000000000000000000
+      StyleLookup = 'backtoolbutton'
     end
     inherited Button2: TButton
       Align = Right
       Position.X = 240.000000000000000000
       Size.Height = 44.000000000000000000
+      StyleLookup = 'donetoolbutton'
     end
   end
 end

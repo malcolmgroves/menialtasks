@@ -1,0 +1,61 @@
+inherited ViewMain_iPhone47in: TViewMain_iPhone47in
+  ClientHeight = 647
+  ClientWidth = 375
+  DesignerMasterStyle = 0
+  inherited MultiView1: TMultiView [0]
+    Size.Height = 647.000000000000000000
+    Visible = False
+    inherited Rectangle1: TRectangle
+      Size.Height = 647.000000000000000000
+      inherited ListBox1: TListBox
+        Size.Height = 606.000000000000000000
+        Viewport.Width = 243.000000000000000000
+        Viewport.Height = 606.000000000000000000
+      end
+    end
+  end
+  inherited Panel3: TPanel [1]
+    Size.Width = 375.000000000000000000
+    Size.Height = 647.000000000000000000
+    inherited ToolBar1: TToolBar
+      Size.Width = 375.000000000000000000
+      inherited Button1: TButton
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        StyleLookup = 'detailstoolbutton'
+      end
+      inherited NavigatorViewModelBindSource: TBindNavigator
+        Visible = False
+      end
+      inherited Button2: TButton
+        Align = Right
+        Position.X = 271.000000000000000000
+        Size.Width = 44.000000000000000000
+        StyleLookup = 'addtoolbutton'
+      end
+      inherited Button3: TButton
+        Align = Right
+        Position.X = 323.000000000000000000
+        Size.Width = 44.000000000000000000
+        StyleLookup = 'composetoolbutton'
+      end
+    end
+    inherited Rectangle2: TRectangle
+      Size.Width = 327.000000000000000000
+      Size.Height = 563.000000000000000000
+      inherited Line1: TLine
+        Size.Width = 271.000000000000000000
+      end
+      inherited Text1: TText
+        Size.Width = 311.000000000000000000
+      end
+      inherited Text2: TText
+        Size.Width = 311.000000000000000000
+        Size.Height = 457.000000000000000000
+      end
+      inherited Circle1: TCircle
+        Position.X = 269.000000000000000000
+      end
+    end
+  end
+end

@@ -68,6 +68,7 @@ uses
 
 {$R *.fmx}
 {$R *.NmXhdpiPh.fmx ANDROID}
+{$R *.iPhone47in.fmx IOS}
 
 {$REGION 'LiveBindings Related Code'}
 procedure TViewMain.RefreshBindings;

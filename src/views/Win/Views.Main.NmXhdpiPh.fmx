@@ -13,8 +13,8 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
         Margins.Bottom = 8.000000000000000000
         Size.Width = 232.000000000000000000
         Size.Height = 566.000000000000000000
-        Viewport.Width = 232.000000000000000000
-        Viewport.Height = 542.000000000000000000
+        Viewport.Width = 227.000000000000000000
+        Viewport.Height = 566.000000000000000000
       end
     end
   end
@@ -22,7 +22,7 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
     Size.Width = 400.000000000000000000
     Size.Height = 615.000000000000000000
     inherited ToolBar1: TToolBar
-      Size.Width = 352.000000000000000000
+      Size.Width = 400.000000000000000000
       Size.Height = 48.000000000000000000
       TabOrder = 15
       inherited Button1: TButton
@@ -37,14 +37,14 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
       end
       inherited Button2: TButton
         Align = Right
-        Position.X = 240.000000000000000000
+        Position.X = 288.000000000000000000
         Size.Width = 48.000000000000000000
         Size.Height = 48.000000000000000000
         StyleLookup = 'addtoolbutton'
       end
       inherited Button3: TButton
         Align = Right
-        Position.X = 296.000000000000000000
+        Position.X = 344.000000000000000000
         Size.Width = 48.000000000000000000
         Size.Height = 48.000000000000000000
         StyleLookup = 'composetoolbutton'
@@ -58,7 +58,7 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
     end
     inherited Rectangle2: TRectangle
       Size.Width = 352.000000000000000000
-      Size.Height = 519.000000000000000000
+      Size.Height = 527.000000000000000000
       inherited Line1: TLine
         Size.Width = 296.000000000000000000
       end
@@ -67,7 +67,7 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
       end
       inherited Text2: TText
         Size.Width = 336.000000000000000000
-        Size.Height = 413.000000000000000000
+        Size.Height = 421.000000000000000000
       end
       inherited Circle1: TCircle
         Position.X = 294.000000000000000000

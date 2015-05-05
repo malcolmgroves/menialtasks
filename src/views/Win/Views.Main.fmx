@@ -22,7 +22,7 @@ object ViewMain: TViewMain
       Position.X = 24.000000000000000000
       Position.Y = 8.000000000000000000
       Size.Width = 531.000000000000000000
-      Size.Height = 40.000000000000000000
+      Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 14
       object Button1: TButton
@@ -40,7 +40,7 @@ object ViewMain: TViewMain
         Align = Left
         Margins.Right = 8.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 40.000000000000000000
+        Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         DataSource = TaskListBindSource
@@ -53,7 +53,7 @@ object ViewMain: TViewMain
         Margins.Right = 8.000000000000000000
         Position.X = 232.000000000000000000
         Size.Width = 80.000000000000000000
-        Size.Height = 40.000000000000000000
+        Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         Text = 'New Task'
@@ -64,7 +64,7 @@ object ViewMain: TViewMain
         Margins.Right = 8.000000000000000000
         Position.X = 320.000000000000000000
         Size.Width = 80.000000000000000000
-        Size.Height = 40.000000000000000000
+        Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
         Text = 'Edit Task'
@@ -86,7 +86,7 @@ object ViewMain: TViewMain
       Margins.Right = 24.000000000000000000
       Margins.Bottom = 24.000000000000000000
       Size.Width = 531.000000000000000000
-      Size.Height = 503.000000000000000000
+      Size.Height = 499.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claWhite
       object Line1: TLine
@@ -144,7 +144,7 @@ object ViewMain: TViewMain
         Margins.Right = 8.000000000000000000
         Margins.Bottom = 8.000000000000000000
         Size.Width = 515.000000000000000000
-        Size.Height = 397.000000000000000000
+        Size.Height = 393.000000000000000000
         Size.PlatformDefault = False
         Text = 'Lorem ipsum dolor sit amet'
         TextSettings.Font.Size = 14.000000000000000000
