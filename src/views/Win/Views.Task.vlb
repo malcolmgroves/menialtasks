@@ -13,7 +13,7 @@ Visible=False
 Coordinates=270,10,54,51
 
 []
-Coordinates=138,12,87,36
+Coordinates=402,1,123,33
 Visible=False
 
 [MemoDetails]
@@ -52,14 +52,6 @@ Visible=False
 
 [Label1]
 Coordinates=330,260,46,33
-Visible=False
-
-[ListBoxGroupFooter1]
-Coordinates=50,260,120,33
-Visible=False
-
-[ListBoxGroupHeader1]
-Coordinates=402,1,123,33
 Visible=False
 
 [ToolBar1]

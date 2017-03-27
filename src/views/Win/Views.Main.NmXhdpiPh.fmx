@@ -3,17 +3,22 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
   ClientWidth = 400
   DesignerMasterStyle = 0
   inherited MultiView1: TMultiView [0]
-    Size.Height = 615.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 50.000000000000000000
     Visible = False
     inherited Rectangle1: TRectangle
-      Size.Height = 615.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 50.000000000000000000
+      inherited Label1: TLabel
+        Size.Width = 234.000000000000000000
+      end
       inherited ListBox1: TListBox
         Margins.Left = 8.000000000000000000
         Margins.Right = 8.000000000000000000
         Margins.Bottom = 8.000000000000000000
-        Size.Width = 232.000000000000000000
-        Size.Height = 566.000000000000000000
-        Viewport.Width = 227.000000000000000000
+        Size.Width = 234.000000000000000000
+        Size.Height = 1.000000000000000000
+        Viewport.Width = 234.000000000000000000
         Viewport.Height = 566.000000000000000000
       end
     end
@@ -22,7 +27,7 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
     Size.Width = 400.000000000000000000
     Size.Height = 615.000000000000000000
     inherited ToolBar1: TToolBar
-      Size.Width = 400.000000000000000000
+      Size.Width = 352.000000000000000000
       Size.Height = 48.000000000000000000
       TabOrder = 15
       inherited Button1: TButton
@@ -37,14 +42,14 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
       end
       inherited Button2: TButton
         Align = Right
-        Position.X = 288.000000000000000000
+        Position.X = 240.000000000000000000
         Size.Width = 48.000000000000000000
         Size.Height = 48.000000000000000000
         StyleLookup = 'addtoolbutton'
       end
       inherited Button3: TButton
         Align = Right
-        Position.X = 344.000000000000000000
+        Position.X = 296.000000000000000000
         Size.Width = 48.000000000000000000
         Size.Height = 48.000000000000000000
         StyleLookup = 'composetoolbutton'
@@ -58,19 +63,23 @@ inherited ViewMain_NmXhdpiPh: TViewMain_NmXhdpiPh
     end
     inherited Rectangle2: TRectangle
       Size.Width = 352.000000000000000000
-      Size.Height = 527.000000000000000000
+      Size.Height = 519.000000000000000000
       inherited Line1: TLine
         Size.Width = 296.000000000000000000
       end
       inherited Text1: TText
         Size.Width = 336.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
       inherited Text2: TText
         Size.Width = 336.000000000000000000
-        Size.Height = 421.000000000000000000
+        Size.Height = 413.000000000000000000
       end
       inherited Circle1: TCircle
         Position.X = 294.000000000000000000
+        inherited Text3: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
       end
     end
   end

@@ -120,7 +120,7 @@ end;
 procedure TViewMain.ListBox1ItemClick(const Sender: TCustomListBox;
   const Item: TListBoxItem);
 begin
-  if TPresentationState.Opened in MultiView1.Presenter.State then
+  if FMX.MultiView.TPresentationState.Opened in MultiView1.Presenter.State then
     MultiView1.HideMaster;
 end;
 

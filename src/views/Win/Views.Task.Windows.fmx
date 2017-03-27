@@ -1,0 +1,13 @@
+inherited TaskView_Windows: TTaskView_Windows
+  DesignerMasterStyle = 0
+  inherited ListBox1: TListBox
+    Viewport.Width = 735.000000000000000000
+    Viewport.Height = 378.000000000000000000
+    inherited lbiDetails: TListBoxItem
+      inherited MemoDetails: TMemo
+        Viewport.Width = 627.000000000000000000
+        Viewport.Height = 227.000000000000000000
+      end
+    end
+  end
+end

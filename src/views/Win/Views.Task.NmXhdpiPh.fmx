@@ -7,13 +7,7 @@ inherited TaskView_NmXhdpiPh: TTaskView_NmXhdpiPh
     Size.Height = 559.000000000000000000
     Viewport.Width = 384.000000000000000000
     Viewport.Height = 559.000000000000000000
-    inherited ListBoxGroupHeader1: TListBoxGroupHeader
-      Size.Width = 384.000000000000000000
-      Size.Height = 30.000000000000000000
-      Size.PlatformDefault = False
-    end
     inherited lbiTitle: TListBoxItem
-      Position.Y = 30.000000000000000000
       Size.Width = 384.000000000000000000
       inherited EditTitle: TEdit
         Size.Width = 276.000000000000000000
@@ -21,7 +15,6 @@ inherited TaskView_NmXhdpiPh: TTaskView_NmXhdpiPh
       end
     end
     inherited lbiDue: TListBoxItem
-      Position.Y = 70.000000000000000000
       Size.Width = 384.000000000000000000
       inherited DateEdit1: TDateEdit
         Size.Width = 276.000000000000000000
@@ -29,19 +22,12 @@ inherited TaskView_NmXhdpiPh: TTaskView_NmXhdpiPh
       end
     end
     inherited lbiDetails: TListBoxItem
-      Position.Y = 110.000000000000000000
       Size.Width = 384.000000000000000000
       inherited MemoDetails: TMemo
         Size.Width = 276.000000000000000000
-        Viewport.Width = 268.000000000000000000
-        Viewport.Height = 219.000000000000000000
+        Viewport.Width = 276.000000000000000000
+        Viewport.Height = 227.000000000000000000
       end
-    end
-    inherited ListBoxGroupFooter1: TListBoxGroupFooter
-      Position.Y = 353.000000000000000000
-      Size.Width = 384.000000000000000000
-      Size.Height = 30.000000000000000000
-      Size.PlatformDefault = False
     end
   end
   inherited ToolBar1: TToolBar

@@ -7,13 +7,7 @@ inherited TaskView_iPhone4in: TTaskView_iPhone4in
     Size.Height = 496.000000000000000000
     Viewport.Width = 304.000000000000000000
     Viewport.Height = 496.000000000000000000
-    inherited ListBoxGroupHeader1: TListBoxGroupHeader
-      Size.Width = 304.000000000000000000
-      Size.Height = 22.000000000000000000
-      Size.PlatformDefault = False
-    end
     inherited lbiTitle: TListBoxItem
-      Position.Y = 22.000000000000000000
       Size.Width = 304.000000000000000000
       inherited EditTitle: TEdit
         Size.Width = 196.000000000000000000
@@ -21,7 +15,6 @@ inherited TaskView_iPhone4in: TTaskView_iPhone4in
       end
     end
     inherited lbiDue: TListBoxItem
-      Position.Y = 62.000000000000000000
       Size.Width = 304.000000000000000000
       inherited DateEdit1: TDateEdit
         Size.Width = 196.000000000000000000
@@ -29,19 +22,12 @@ inherited TaskView_iPhone4in: TTaskView_iPhone4in
       end
     end
     inherited lbiDetails: TListBoxItem
-      Position.Y = 102.000000000000000000
       Size.Width = 304.000000000000000000
       inherited MemoDetails: TMemo
         Size.Width = 196.000000000000000000
-        Viewport.Width = 188.000000000000000000
-        Viewport.Height = 219.000000000000000000
+        Viewport.Width = 196.000000000000000000
+        Viewport.Height = 227.000000000000000000
       end
-    end
-    inherited ListBoxGroupFooter1: TListBoxGroupFooter
-      Position.Y = 345.000000000000000000
-      Size.Width = 304.000000000000000000
-      Size.Height = 22.000000000000000000
-      Size.PlatformDefault = False
     end
   end
   inherited ToolBar1: TToolBar

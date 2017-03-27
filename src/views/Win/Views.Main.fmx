@@ -11,7 +11,8 @@ object ViewMain: TViewMain
   DesignerMasterStyle = 0
   object Panel3: TPanel
     Align = Client
-    Size.Width = 579.000000000000000000
+    Margins.Left = 233.000000000000000000
+    Size.Width = 595.000000000000000000
     Size.Height = 591.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -21,7 +22,7 @@ object ViewMain: TViewMain
       Margins.Right = 24.000000000000000000
       Position.X = 24.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 531.000000000000000000
+      Size.Width = 547.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 14
@@ -30,11 +31,10 @@ object ViewMain: TViewMain
         Margins.Right = 8.000000000000000000
         Position.X = 232.000000000000000000
         Size.Width = 80.000000000000000000
-        Size.Height = 40.000000000000000000
+        Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         Text = 'Button1'
-        Visible = False
       end
       object NavigatorViewModelBindSource: TBindNavigator
         Align = Left
@@ -51,7 +51,7 @@ object ViewMain: TViewMain
       object Button2: TButton
         Align = Left
         Margins.Right = 8.000000000000000000
-        Position.X = 232.000000000000000000
+        Position.X = 320.000000000000000000
         Size.Width = 80.000000000000000000
         Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
@@ -62,7 +62,7 @@ object ViewMain: TViewMain
       object Button3: TButton
         Align = Left
         Margins.Right = 8.000000000000000000
-        Position.X = 320.000000000000000000
+        Position.X = 408.000000000000000000
         Size.Width = 80.000000000000000000
         Size.Height = 44.000000000000000000
         Size.PlatformDefault = False
@@ -85,7 +85,7 @@ object ViewMain: TViewMain
       Margins.Top = 16.000000000000000000
       Margins.Right = 24.000000000000000000
       Margins.Bottom = 24.000000000000000000
-      Size.Width = 531.000000000000000000
+      Size.Width = 547.000000000000000000
       Size.Height = 499.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = claWhite
@@ -96,7 +96,7 @@ object ViewMain: TViewMain
         Margins.Right = 40.000000000000000000
         Position.X = 16.000000000000000000
         Position.Y = 73.000000000000000000
-        Size.Width = 475.000000000000000000
+        Size.Width = 491.000000000000000000
         Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = claWhite
@@ -109,7 +109,7 @@ object ViewMain: TViewMain
         Margins.Bottom = 8.000000000000000000
         Position.X = 8.000000000000000000
         Position.Y = 8.000000000000000000
-        Size.Width = 515.000000000000000000
+        Size.Width = 531.000000000000000000
         Size.Height = 57.000000000000000000
         Size.PlatformDefault = False
         Text = 
@@ -134,7 +134,7 @@ object ViewMain: TViewMain
           'Proin mattis interdum tempus. Etiam ac vehicula neque. Donec tem' +
           'por, velit sit'
         TextSettings.Font.Size = 14.000000000000000000
-        TextSettings.Font.Style = [fsBold]
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claDimgray
         TextSettings.HorzAlign = Leading
       end
@@ -143,7 +143,7 @@ object ViewMain: TViewMain
         Margins.Left = 8.000000000000000000
         Margins.Right = 8.000000000000000000
         Margins.Bottom = 8.000000000000000000
-        Size.Width = 515.000000000000000000
+        Size.Width = 531.000000000000000000
         Size.Height = 393.000000000000000000
         Size.PlatformDefault = False
         Text = 'Lorem ipsum dolor sit amet'
@@ -155,7 +155,7 @@ object ViewMain: TViewMain
       object Circle1: TCircle
         Anchors = [akTop, akRight]
         Fill.Color = claDimgray
-        Position.X = 473.000000000000000000
+        Position.X = 489.000000000000000000
         Position.Y = 24.000000000000000000
         Size.Width = 74.000000000000000000
         Size.Height = 74.000000000000000000
@@ -168,7 +168,7 @@ object ViewMain: TViewMain
           Size.PlatformDefault = False
           Text = '1 Nov'
           TextSettings.Font.Size = 18.000000000000000000
-          TextSettings.Font.Style = [fsBold]
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
           TextSettings.FontColor = claWhite
         end
       end
@@ -178,6 +178,7 @@ object ViewMain: TViewMain
     TargetControl = Panel3
     DrawerOptions.Mode = PushingDetailView
     MasterButton = Button1
+    NavigationPaneOptions.CollapsedWidth = 233.000000000000000000
     Size.Width = 249.000000000000000000
     Size.Height = 591.000000000000000000
     Size.PlatformDefault = False
@@ -185,7 +186,7 @@ object ViewMain: TViewMain
     object Rectangle1: TRectangle
       Align = Client
       Fill.Color = claWhite
-      Size.Width = 248.000000000000000000
+      Size.Width = 233.000000000000000000
       Size.Height = 591.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
@@ -198,7 +199,7 @@ object ViewMain: TViewMain
         Margins.Bottom = 8.000000000000000000
         Position.X = 8.000000000000000000
         Position.Y = 8.000000000000000000
-        Size.Width = 232.000000000000000000
+        Size.Width = 217.000000000000000000
         Size.Height = 17.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'listboxheaderlabel'
@@ -208,7 +209,7 @@ object ViewMain: TViewMain
       object ListBox1: TListBox
         Align = Client
         Margins.Top = 8.000000000000000000
-        Size.Width = 248.000000000000000000
+        Size.Width = 233.000000000000000000
         Size.Height = 550.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'transparentlistboxstyle'
@@ -1651,7 +1652,7 @@ object ViewMain: TViewMain
         DefaultItemStyles.GroupHeaderStyle = ''
         DefaultItemStyles.GroupFooterStyle = ''
         OnItemClick = ListBox1ItemClick
-        Viewport.Width = 232.000000000000000000
+        Viewport.Width = 217.000000000000000000
         Viewport.Height = 550.000000000000000000
       end
     end

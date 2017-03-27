@@ -26,17 +26,11 @@ object TaskView: TTaskView
     DefaultItemStyles.GroupFooterStyle = ''
     Viewport.Width = 735.000000000000000000
     Viewport.Height = 378.000000000000000000
-    object ListBoxGroupHeader1: TListBoxGroupHeader
-      TabOrder = 3
-      Text = 'Task Details'
-      Visible = False
-    end
     object lbiTitle: TListBoxItem
       Padding.Left = 100.000000000000000000
       Padding.Top = 8.000000000000000000
       Padding.Right = 8.000000000000000000
       Padding.Bottom = 8.000000000000000000
-      Position.Y = 19.000000000000000000
       Size.Width = 735.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
@@ -78,7 +72,7 @@ object TaskView: TTaskView
       Padding.Top = 8.000000000000000000
       Padding.Right = 8.000000000000000000
       Padding.Bottom = 8.000000000000000000
-      Position.Y = 59.000000000000000000
+      Position.Y = 40.000000000000000000
       Size.Width = 735.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
@@ -86,7 +80,7 @@ object TaskView: TTaskView
       TabOrder = 1
       Text = 'Due'
       object DateEdit1: TDateEdit
-        Date = 42309.000000000000000000
+        Date = 43040.000000000000000000
         Align = Client
         Size.Width = 627.000000000000000000
         Size.Height = 24.000000000000000000
@@ -99,7 +93,7 @@ object TaskView: TTaskView
       Padding.Top = 8.000000000000000000
       Padding.Right = 8.000000000000000000
       Padding.Bottom = 8.000000000000000000
-      Position.Y = 99.000000000000000000
+      Position.Y = 80.000000000000000000
       Size.Width = 735.000000000000000000
       Size.Height = 243.000000000000000000
       Size.PlatformDefault = False
@@ -121,12 +115,6 @@ object TaskView: TTaskView
         Viewport.Height = 223.000000000000000000
       end
     end
-    object ListBoxGroupFooter1: TListBoxGroupFooter
-      Position.Y = 342.000000000000000000
-      StyleLookup = 'listboxplainheader'
-      TabOrder = 4
-      Visible = False
-    end
   end
   object ToolBar1: TToolBar
     Align = Bottom
@@ -147,7 +135,6 @@ object TaskView: TTaskView
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 4
-      Visible = True
     end
     object Button2: TButton
       Action = actSave
@@ -162,7 +149,6 @@ object TaskView: TTaskView
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      Visible = True
     end
     object Label1: TLabel
       Align = Center

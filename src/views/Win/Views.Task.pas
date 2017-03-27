@@ -33,8 +33,6 @@ type
     LinkControlToField4: TLinkControlToField;
     ToolBar1: TToolBar;
     Label1: TLabel;
-    ListBoxGroupHeader1: TListBoxGroupHeader;
-    ListBoxGroupFooter1: TListBoxGroupFooter;
     procedure TaskBindSourceCreateAdapter(Sender: TObject;
       var ABindSourceAdapter: TBindSourceAdapter);
     procedure actSaveUpdate(Sender: TObject);
@@ -54,6 +52,7 @@ implementation
 {$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.iPhone4in.fmx IOS}
 {$R *.Macintosh.fmx _MACOS}
+{$R *.Windows.fmx MSWINDOWS}
 
 { TForm1 }
 
