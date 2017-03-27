@@ -4,4 +4,4 @@ MenialTasks is, as the name suggests, a super-simple tasklist app. It's only int
 
 For more info check out [my blog](http://www.malcolmgroves.com/blog/?cat=90) 
 
-NB: Now updated for XE7 and XE8. Also uses FireUI to tailor the Views for different platforms.
+NB: Now updated for 10.2 Tokyo. Also uses FireUI to tailor the Views for different platforms.
